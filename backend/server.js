@@ -9,11 +9,13 @@ import connctToMongoDb from "./db/connectToMongoDB.js";
 import userRoutes from "./routes/user.route.js"
 import { app, server } from "./socket/socket.js";
 
+dotenv.config();
+
 const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve(); 
 
-dotenv.config();
+
 
 app.use(express.json()); 
 app.use(cookieParser());
